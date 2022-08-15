@@ -1,0 +1,32 @@
+version: '3.4'
+
+services:
+  climatime:
+    image: ${DOCKER_REGISTRY-}climatime
+    build:
+      context: .
+      dockerfile: ClimaTime/Dockerfile
+    ports:
+     - "8082:80"
+    depends_on:
+    - apiclient
+    - sqldata
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+        - SA_PASSWORD=123@Mudar
+        - ACCEPT_EULA=Y
+    volumes:
+        - C:\Dados:/var/opt/mssql/data
+    ports:
+        - "1450:1433" 
+
+  apiclient:
+    image: ${DOCKER_REGISTRY-}apiclimate
+    build:
+      context: .
+      dockerfile: ApiClimate/Dockerfile
+    ports:
+     - "8083:80"
+    depends_on: 
+     - sqldata

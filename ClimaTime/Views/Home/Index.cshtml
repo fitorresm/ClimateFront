@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="text-center">
+    <img src="~/img/header.jpg" class="img" />
+    <!--Inicio dos card's de mais quente ou mais frio-->
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <h5 class="card-header">Cidades mais quentes hoje</h5>
+                <div class="card-body" id="body-hot">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <h5 class="card-header">Cidades mais frias hoje</h5>
+                <div class="card-body" id="body-cold">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <!--End Cards-->
+    <!--Inicio da Seção de pesquisa-->
+    <div class="card">
+        <div class="card-header">
+            Buscar Previsão de tempo
+        </div>
+        <div class="card-body">
+            <div class="row justify-content-start">
+                <div class="col-md-10" id="selectUF">
+                </div>
+            </div>
+            <br />
+            <div class="row justify-content-start">
+                <div class="col-md-10" id="selectCity">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--End Cards-->
+    <!--Iniciodo content-->
+    <div class="row" id="content">
+    </div>
+
+</div>
+<script src="~/js/site.js" asp-append-version="true"></script>

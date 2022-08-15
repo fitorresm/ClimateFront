@@ -1,0 +1,43 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+header {
+  background-color:cornflowerblue;
+}
+
+.card-header {
+   background-color: steelblue;
+   color:#ffffff;
+   font-style: inherit;
+}
+
+.img-header {
+    padding: 60px;
+    text-align: center;    
+    color: white;
+    font-size: 30px;
+}
+
+.img {
+    height: 20%;
+    width: 100%;
+}
+.lblTittle{
+    font-style:inherit;
+}
